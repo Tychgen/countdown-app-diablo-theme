@@ -48,7 +48,7 @@ function tick(): void {
 }
 
 
-// Video sound section 
+
 const video: HTMLVideoElement | null = document.getElementById('background-video') as HTMLVideoElement | null;
 const toggleSoundDiv: HTMLDivElement | null = document.querySelector('.toggle-sound') as HTMLDivElement | null;
 
@@ -62,10 +62,10 @@ if (video && toggleSoundDiv) {
       toggleSoundDiv.querySelector('.sound--icon')?.classList.add('fa-volume-up');
       toggleSoundDiv.classList.remove('sound-mute'); // 
     } else {
-      video.muted = true; // Video sesini kapat
+      video.muted = true;
       toggleSoundDiv.querySelector('.sound--icon')?.classList.remove('fa-volume-up');
       toggleSoundDiv.querySelector('.sound--icon')?.classList.add('fa-volume-off');
-      toggleSoundDiv.classList.add('sound-mute'); // 
+      toggleSoundDiv.classList.add('sound-mute'); 
     }
     isMuted = !isMuted; 
   });
